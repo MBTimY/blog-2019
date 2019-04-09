@@ -1,0 +1,10 @@
+<div class="main min-width" [perfectScrollbar]>
+    <div *ngIf="!isHideHeader" class="header"
+         [ngClass]="{'header-transparent': (bannerType && bannerType !== -1 && bannerType !==1) ,'relative': bannerType === -1}">
+        <app-headers></app-headers>
+    </div>
+    <div class="content-body"
+         [ngClass]="{'no-header':isHideHeader,'no-footer':isHideFooter}">
+        <router-outlet></router-outlet>
+    </div>
+</div>

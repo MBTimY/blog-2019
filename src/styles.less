@@ -1,0 +1,478 @@
+// -------- 引入滚动条样式文件 -----------
+@import "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css";
+/*  all the color in this file  */
+@import '~font-awesome/less/font-awesome.less';
+@import './assets/less/font';
+@import './assets/less/flex';
+
+
+@3D4B69: #3D4B69;
+@1E2333: #1E2333;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html, body, .app {
+    height: 100%;
+}
+
+html, body {
+    //background-color: @1E2333;
+}
+
+* {
+    font-weight: 400;
+    font-style: normal;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a, a:focus, a:hover {
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+div:focus {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+// 页面内容最小宽度
+.min-width {
+    min-width: 1200px;
+}
+
+// 页面内容宽度
+.main-width {
+    width: 1160px;
+}
+
+// 左右布局 左侧宽度
+.left-width {
+    width: 200px;
+}
+
+.pd-left-width {
+    padding-left: 210px;
+}
+
+// banner内容
+.bannerType1 {
+    .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        width: 1120px;
+    }
+}
+
+.banner-main-width {
+    width: 1120px;
+}
+
+
+//公共字体样式
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-26 {
+    font-size: 26px;
+}
+
+//字体公共样式
+.text-center {
+    text-align: center
+}
+
+.text-right {
+    text-align: right;
+}
+
+.cursor-point {
+    cursor: pointer;
+}
+
+.cursor-no-drop {
+    cursor: no-drop;
+}
+
+//padding
+.pd-10 {
+    padding: 10px;
+}
+
+.pd-bt-5 {
+    padding-bottom: 5px;
+}
+
+.pd-bt-20 {
+    padding-bottom: 20px;
+}
+
+.pd-tp-2 {
+    padding-top: 2px;
+}
+
+.pd-tp-10 {
+    padding-top: 10px;
+}
+
+.pd-tp-20 {
+    padding-top: 20px;
+}
+
+.pd-tp-5 {
+    padding-top: 5px;
+}
+
+.pd-tp-40 {
+    padding-top: 40px;
+}
+
+.pd-rt-0 {
+    padding-right: 0 !important;
+}
+
+.pd-rt-3 {
+    padding-right: 3px;
+}
+
+.pd-rt-5 {
+    padding-right: 5px;
+}
+
+.pd-rt-10 {
+    padding-right: 10px;
+}
+
+.pd-rt-20 {
+    padding-right: 20px;
+}
+
+.pd-rt-30 {
+    padding-right: 30px;
+}
+
+.pd-lf-5 {
+    padding-left: 5px;
+}
+
+.pd-lf-10 {
+    padding-left: 10px;
+}
+
+.pd-lf-15 {
+    padding-left: 15px;
+}
+
+.pd-lf-20 {
+    padding-left: 20px;
+}
+
+.pd-lf-28 {
+    padding-left: 28px;
+}
+
+.pd-lf-30 {
+    padding-left: 30px;
+}
+
+.pd-bt-10 {
+    padding-bottom: 10px;
+}
+
+.pd-bt-30 {
+    padding-bottom: 42px;
+}
+
+.pd-bt-42 {
+    padding-bottom: 50px;
+}
+
+.pd-bt-50 {
+    padding-bottom: 50px;
+}
+
+// 位置
+.top {
+    top: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+// 清除浮动
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+    display: block;
+}
+
+//margin
+.mg-lf-5 {
+    margin-left: 5px
+}
+
+.mg-lf-10 {
+    margin-left: 10px
+}
+
+.mg-lf-20 {
+    margin-left: 20px
+}
+
+.mg-lf-25 {
+    margin-left: 25px
+}
+
+.mg-lf-30 {
+    margin-left: 30px
+}
+
+.mg-rt-5 {
+    margin-right: 5px
+}
+
+.mg-rt-10 {
+    margin-right: 10px
+}
+
+.mg-rt-20 {
+    margin-right: 20px
+}
+
+.mg-bt-0 {
+    margin-bottom: 0 !important;
+}
+
+.mg-bt-5 {
+    margin-bottom: 5px
+}
+.mg-bt-8 {
+    margin-bottom: 8px
+}
+
+.mg-bt-10 {
+    margin-bottom: 10px
+}
+
+.mg-bt-20 {
+    margin-bottom: 20px
+}
+
+.mg-tp-10 {
+    margin-top: 10px
+}
+
+.mg-tp-20 {
+    margin-top: 20px
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+/*显示省略号*/
+.ellipsis-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.ellipsis-2 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+//竖向显示滚动条
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+//超出部分截取
+.overflow-hidden {
+    overflow: hidden;
+}
+
+//滚动条美化
+::-webkit-scrollbar {
+    width: 6px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: @3D4B69;
+}
+
+//::-webkit-scrollbar-track { /*滚动条里面轨道*/
+//    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+//    border-radius: 10px;
+//    background: rgba(36, 43, 62, 0.8);
+//}
+
+// 滚动条美化-滚动条插件
+.ps {
+    padding-right: 6px;
+}
+
+.ps__rail-y {
+    width: 6px;
+    z-index: 9;
+    left: auto!important;
+}
+
+.ps__rail-y:hover > .ps__thumb-y, .ps__rail-y:focus > .ps__thumb-y, .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 6px;
+    background: @3D4B69;
+}
+.ps__rail-x:hover > .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__rail-x.ps--clicking .ps__thumb-x {
+    height: 6px;
+    background: @3D4B69;
+}
+
+.ps__thumb-y {
+    background: @3D4B69;
+    right: 0;
+}
+.ps__thumb-x {
+    background: @3D4B69;
+    bottom: 0;
+}
+
+.ps .ps__rail-x:hover, .ps .ps__rail-y:hover, .ps .ps__rail-x:focus, .ps .ps__rail-y:focus, .ps .ps__rail-x.ps--clicking, .ps .ps__rail-y.ps--clicking {
+    background: @1E2333;
+}
+
+.ps:hover > .ps__rail-x, .ps:hover > .ps__rail-y, .ps--focus > .ps__rail-x, .ps--focus > .ps__rail-y, .ps--scrolling-x > .ps__rail-x, .ps--scrolling-y > .ps__rail-y {
+    opacity: 1;
+}

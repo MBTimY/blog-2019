@@ -1,0 +1,116 @@
+
+
+//数字和英文的字体
+@font-face {
+  font-family: DINPro-Regular;
+  src: url('../../assets/font/DINPro-Regular.otf');
+  font-style: normal;
+  font-weight: initial;
+  font-display: fallback;
+}
+
+// 数字和英文的字体 加粗
+@font-face {
+  font-family: DINPro-Bold;
+  src: url('../../assets/font/DINPro-Bold.otf');
+  font-style: normal;
+  font-weight: initial;
+  font-display: fallback;
+}
+
+// 数字和英文的字体 细
+@font-face {
+  font-family: DINPro-Light;
+  src: url('../../assets/font/DINPro-Light.otf');
+  font-style: normal;
+  font-weight: initial;
+  font-display: fallback;
+}
+
+//韩文字体
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../../assets/font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/font/NanumGothic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+
+.font-DINPro-regular() {
+  font-family: DINPro-Regular;
+  font-weight: initial;
+}
+
+.font-DINPro-Light() {
+  font-family: DINPro-Light;
+  font-weight: initial;
+}
+
+.font-DINPro-bold() {
+  font-family: DINPro-Bold;
+  font-weight: initial;
+}
+
+.font-weight-bold() {
+  font-weight: 700;
+}
+
+.font-weight-medium() {
+  font-weight: 600;
+}
+
+.font-weight-regular() {
+  font-weight: 500;
+}
+
+.font-weight-light() {
+  font-weight: 400;
+}
+
+.font-weight-thin() {
+  font-weight: 300;
+}
+
+
+
+// 字体粗细
+.font-weight-bold {
+  .font-weight-bold();
+}
+
+.font-weight-medium {
+  .font-weight-medium();
+}
+
+.font-weight-regular {
+  .font-weight-regular();
+}
+
+.font-weight-light {
+  .font-DINPro-Light();
+}
+
+.font-weight-thin {
+  .font-weight-thin();
+}
+
+.language-en {
+    font-family: /*西文*/ DINPro-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, Helvetica, Arial;
+  .font-weight-bold {
+    .font-DINPro-bold();
+    & > * {
+      .font-DINPro-bold();
+    }
+  }
+}
+
+.language-ko {
+    font-family: DINPro-Regular,/*韩文*/ NanumGothic, Apple SD Gothic Neo, NanumBarunGothic, Malgun Gothic, dotum, Lucida Grande, sans-serif;
+}
+
+.language-zh {
+    font-family: DINPro-Regular,/*中文*/ PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+}
+
