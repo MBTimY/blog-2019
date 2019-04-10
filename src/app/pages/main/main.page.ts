@@ -1,4 +1,5 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
+import {LanguageService} from '../../service/language.service';
 
 @Component({
     templateUrl: './main.page.html',
@@ -11,13 +12,16 @@ export class MainPage implements OnInit, OnDestroy {
 
     /*-----Constructor Part-----*/
 
-    constructor() {
+    constructor(
+        private languageService: LanguageService,
+        ) {
 
     }
 
     /*-----Lifecycle Part-----*/
 
     ngOnInit() {
+        this.showLanguageText();
 
     }
 
@@ -27,5 +31,11 @@ export class MainPage implements OnInit, OnDestroy {
 
     /*-----Methods Part-----*/
 
-
+    /**
+     * 导航栏显示当前语言
+     */
+    showLanguageText(value?) {
+        const currLang = value || this.languageService.getCurrentLanguage();
+        this.languageService.setCurrentLanguage(currLang, true);
+    }
 }

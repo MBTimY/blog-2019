@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Title} from '@angular/platform-browser';
+import {TranslateService} from '@ngx-translate/core';
 
 @Injectable(
     {
@@ -12,7 +13,10 @@ export class TitleService {
 
     /*-----Constructor Part-----*/
 
-    constructor(private titleService: Title) {
+    constructor(
+        private translate: TranslateService,
+        private titleService: Title
+    ) {
     }
 
     /*-----Method Part-----*/
@@ -21,7 +25,7 @@ export class TitleService {
      * 设置默认标题
      */
     setDefaultTitle() {
-        this.setTitle('Bithumb Global');
+        this.setTitle(this.translate.instant('Title'));
     }
 
     /**

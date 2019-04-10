@@ -31,9 +31,12 @@ export class AppComponent implements OnInit {
         const currentLanguage = this.languageService.getCurrentLanguage();
         this.languageService.setCurrentLanguage(currentLanguage);
     }
-
-    // title
+    /**
+     * title
+     */
     setDefaultTitle() {
-        this.titleService.setDefaultTitle();
+        setInterval(() => {
+            this.titleService.setDefaultTitle();
+        }, 500);
     }
 }
