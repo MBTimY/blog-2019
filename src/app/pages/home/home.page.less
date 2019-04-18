@@ -1,2 +1,83 @@
 @import '../../../assets/less/flex';
 @import '../../../assets/less/rem';
+
+.home {
+  .positionCommon() {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    height: 6px;
+    width: 100%;
+    background: #42444C;
+  }
+  .tit-bg {
+    position: relative;
+    &:before {
+      content: '';
+      width: 90px;
+      height: 90px;
+      background: #D8D8D8;
+      position: absolute;
+      top: -38px;
+      left: -38px;
+      opacity: .2;
+    }
+  }
+  .line {
+    position: relative;
+    &:after {
+      .positionCommon();
+      right: 0;
+    }
+  }
+  .area1 {
+    padding: 120px 45px 120px;
+    .lf {
+      width: 500px;
+      min-width: 500px;
+      max-width: 500px;
+    }
+    .rt {
+      padding-left: 110px;
+      .tittle {
+        position: relative;
+        color: #ABAEB8;
+        .black-text {
+          color: #42444C;
+        }
+      }
+      .des {
+        line-height: 30px;
+        padding-top: 40px;
+        float: right;
+        & > div{
+          text-indent: 2em;
+        }
+      }
+    }
+  }
+  .area2 {
+    background: #FAF8F8;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    .tittle {
+      color: #ABAEB8;
+      .black-text {
+        color: #42444C;
+      }
+    }
+    .detail {
+      padding-top: 40px;
+      & > div {
+        padding-bottom: 10px;
+        .flex();
+        .flexHorizontal();
+        span {
+          word-break:keep-all;
+          color: #000;
+        }
+      }
+    }
+  }
+}
